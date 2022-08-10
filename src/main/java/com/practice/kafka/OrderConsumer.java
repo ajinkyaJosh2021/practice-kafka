@@ -16,6 +16,7 @@ public class OrderConsumer {
     @KafkaListener(groupId = "myGroup",topics = "preOrder")
     public void payment(ConsumerRecord<String,String > record){
         logger.info(String.format("PreOrder received %s and %s",record.key() ,record.value()));
-
     }
+
+
 }
